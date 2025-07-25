@@ -2,32 +2,32 @@
 
 **Se_Mu_AD** 是一个用于自动驾驶任务的结构化多任务学习框架，支持任务亲和度估计、动态分组和CARLA环境下的端到端控制策略训练与评估。该框架整合了轨迹生成等模块，适用于CARLA模拟器与自动驾驶研究中的多任务优化场景。
 
-## 🔧 环境配置
+## 🔧 Environment Setup
 
-请使用 `conda` 创建项目所需的虚拟环境：
+Please use `conda` to create the required virtual environment:
 
 ```bash
 conda env create -f environment.yml
 conda activate semuad
 ```
 
-此外，请安装 CARLA 和其依赖：
+Also, install CARLA and its dependencies:
 ```
 bash setup_carla.sh
 ```
 
-## 训练与测试
-1. 生成训练数据
+##  Training & Evaluation
+1. Generate training data
  ```
 python generate_dataset_slurm.py
 ```
 
-2. 模型评估
+2. Run evaluation
 ```
 python evaluate_routes_slurm.py
 ```
 
-## 项目结构
+## Project Structure
 ```
 Se_Mu_AD/
 │
