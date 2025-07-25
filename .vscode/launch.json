@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "train",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/wei/carla_garage/team_code/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [  
+                "--id", "dw_model_000",
+                "--batch_size", "12",
+                "--setting", "all",
+                "--root_dir", "/home/wei/dw/data",
+                "--logdir", "/home/wei/carla_garage/logdir/",
+                "--use_controller_input_prediction", "1",
+                "--use_wp_gru", "0",
+                "--use_discrete_command", "1",
+                "--use_tp", "1",
+                "--cpu_cores", "2",
+                "--num_repetitions", "1",
+                "--continue_epoch", "0", 
+                "--load_file", "/home/wei/carla_garage/result/001_so_128/model_0030.pth"
+            ],
+            "pythonArgs": [
+                "-m", "torch.distributed.run",
+                "--nnodes","1",
+                "--nproc_per_node","1",
+                "--max_restarts","0",
+                "--rdzv_id","123456780",
+                "--rdzv_backend","c10d",
+            ]
+        },
+        {
+            "name": "result_parser",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/result_parser.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [    
+                "--xml", "/media/wei/Data/code/carla_garage/leaderboard/data/longest6.xml",
+                "--results", "/media/wei/Data/code/carla_garage/id0",
+                "--log_dir", "/media/wei/Data/code/carla_garage/id0",
+            ]
+        }
+    ]
+}
