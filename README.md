@@ -13,7 +13,7 @@ conda activate semuad
 此外，请安装 CARLA 和其依赖：
 bash setup_carla.sh
 
-## 训练与测试
+# 训练与测试
 1. 生成训练数据
 python generate_dataset_slurm.py
 
@@ -21,7 +21,7 @@ python generate_dataset_slurm.py
 python evaluate_routes_slurm.py
 
 
-## 项目结构
+# 项目结构
 Se_Mu_AD/
 │
 ├── team_code/                  # 多任务策略与模型主干实现
