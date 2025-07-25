@@ -9,19 +9,26 @@
 ```bash
 conda env create -f environment.yml
 conda activate semuad
+```
 
 此外，请安装 CARLA 和其依赖：
+```
 bash setup_carla.sh
+```
 
-# 训练与测试
+## 训练与测试
 1. 生成训练数据
+ ```
 python generate_dataset_slurm.py
+```
 
-2. 执行模型评估
+2. 模型评估
+```
 python evaluate_routes_slurm.py
+```
 
-
-# 项目结构
+## 项目结构
+```
 Se_Mu_AD/
 │
 ├── team_code/                  # 多任务策略与模型主干实现
@@ -37,6 +44,5 @@ Se_Mu_AD/
 ├── environment.yml            # Conda环境配置
 ├── setup_carla.sh             # CARLA自动安装脚本
 ├── LICENSE                    # 开源协议（默认为MIT）
-
-本项目遵循 MIT License
+```
 
