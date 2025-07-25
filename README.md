@@ -1,4 +1,4 @@
-# Se_Mu_AD: Second-Order Multi-Modal Fusion and Dynamic Optimization for Robust Multi-Task Autonomous Driving
+# Second-Order Multi-Modal Fusion and Dynamic Optimization for Robust Multi-Task Autonomous Driving
 
 A structured multi-task learning framework for autonomous driving tasks, supporting task affinity estimation, dynamic grouping, and end-to-end control strategy training and evaluation in the CARLA environment. The framework integrates modules such as trajectory generation and is suitable for multi-task optimization scenarios in the CARLA simulator and autonomous driving research.
 
